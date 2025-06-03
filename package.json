@@ -1,15 +1,19 @@
 {
   "name": "todolist-05",
   "private": true,
+  "homepage": "https://palindro-me.github.io/todolist-05_igor",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc -b && vite build",
     "test": "vitest",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "uuid": "11.0.3"

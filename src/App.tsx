@@ -1,7 +1,7 @@
 import './App.css';
-import React, {useState} from 'react';
 import {v1} from 'uuid';
 import {TodolistItem} from './TodolistItem.tsx';
+import {useState} from 'react';
 
 export type Task = {
     id: string
@@ -48,7 +48,7 @@ const [tasks, setTasks] = useState({
     // ]);
 
     const deleteTask = ( todolistID: string, taskId: string) => {
-        setTasks({...tasks, [todolistId1]:tasks[todolistID].filter(t => t.id!==taskId)})
+        setTasks({...tasks, [todolistID]:tasks[todolistID].filter(t => t.id!==taskId)})
         // const filteredTasks = tasks.filter(task => {
         //     return task.id !== taskId;
         // });
@@ -56,7 +56,7 @@ const [tasks, setTasks] = useState({
     };
 
     const changeFilter = (todolistID: string, newFilter: FilterValues) => {
-        const currentToDo = todolists.find(el => el.id === todolistID);
+        // const currentToDo = todolists.find(el => el.id === todolistID);
        setTodolists(todolists.map(el=> el.id===todolistID ? {...el, filter:newFilter} : el) )
         }
 
